@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Form</title>
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/css/Index.css">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+</head>
+<body>
+<div class="row justify-content-center">
+    <form id="foodForm" style="width: 60%">
+        <fieldset class="scheduler-border">
+            <legend class="scheduler-border"> FOOD DETAILS </legend>
+            <div class="form-row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="foodCode">Food Code</label>
+                                    <input type="text" name="FoodCode" class="form-control" id="foodCode" placeholder="Food Code">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="foodName">Food Name</label>
+                                <input type="text" name="FoodName" class="form-control" id="foodName" placeholder="Food Name">
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="description">Description</label>
+                                <input type="text" name="Food Code" class="form-control" id="description" placeholder="Description">
+                            </div>
+
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="price">Food Price</label>
+                                    <input type="text" name="FoodCode" class="form-control" id="price" placeholder="Food Price">
+                                </div>
+                            </div>
+
+                            <button type="button" id="btnFoodSave" style="margin-top: 10px ;width: 20%"  class="btn btn-success" >Save</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+
+
+
+<script src="dist/js/jquery-3.3.1.min.js"></script>
+<script src="dist/js/bootstrap.min.js" rel="script" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+
+    $('#btnFoodSave').click(function () {
+        let foodForm = $('#foodForm').serialize();
+        $.ajax({
+            url: "api/service/FoodService.php",
+            method: "POST",
+            async: true,
+            data: cusForm
+        }).done(function (res) {
+            alert(res);
+        });
+    });
+</script>
+</body>
+</html>

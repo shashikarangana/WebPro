@@ -24,7 +24,13 @@ class FoodRepoImpl implements FoodRepo
 
     public function addFood(Food $food): bool
     {
-        // TODO: Implement addFood() method.
+        $response=$this->connection->query(
+            "INSERT INTO Food VALUES (
+                      '{$food->getFid()}',
+                      '{$food->getFname()}',
+                      {$food->getPrice()},
+                      '{$food->getDescription()}')");
+        return $response;
     }
 
     public function deleteFood(string $id): bool
