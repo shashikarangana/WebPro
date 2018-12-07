@@ -5,7 +5,7 @@
       <paths name="Virtual_Server">
         <serverdata>
           <mappings>
-            <mapping deploy="PHP_PROJECT\FoodOdering" local="$PROJECT_DIR$/FoodOdering" web="PHP_PROJECT/FoodOdering" />
+            <mapping deploy="WEBproject\WebPro\FoodOdering" local="$PROJECT_DIR$/FoodOdering" web="WEBproject/WebPro/FoodOdering" />
           </mappings>
         </serverdata>
       </paths>

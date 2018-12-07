@@ -10,7 +10,16 @@ class FoodBusinessImpl implements FoodBusiness
 
     public function addFood(Food $food): bool
     {
-        // TODO: Implement addFood() method.
+        $connection = (new DBConnction())->getDBConnection();
+        $foodRepo = new FoodRepoImpl();
+        $foodRepo->setConnection($connection);
+        $connection->autocommit(false);
+
+        $connection->commit();
+        $connection->rollback();
+        $connection->autocommit(true);
+        return $foodRepo->addFood($food);
+        return true;
     }
 
     public function deleteFood(string $id): bool
