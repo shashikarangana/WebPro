@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="Virtual_Server">
+    <serverData>
+      <paths name="Virtual_Server">
+        <serverdata>
+          <mappings>
+            <mapping deploy="PHP_PROJECT\FoodOdering" local="$PROJECT_DIR$/FoodOdering" web="PHP_PROJECT/FoodOdering" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
