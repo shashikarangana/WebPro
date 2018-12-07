@@ -18,7 +18,7 @@
             /*background-size: cover;*/
         }
         #form1{
-            /*background:url("dist/images/c700x420.jpg");*/
+            /*background:url("dist/images/thumb.jpg");*/
             /*background-size: cover;*/
         }
         #customerOrderForm{
@@ -44,11 +44,11 @@
 <section class="row" id="ph1" style="padding: 0;margin: 0;width: 100%;height: 950px;">
     <!--<img src="dist/images/03307-1-HomepageVersionA_PhillyKing_2220x920px_CR.jpg" alt="" style="width: 100%;height: 550px">-->
     <section class="align-content-center" style="width: 100%;height: 75px;margin: 0;padding: 0;">
-        <section class="col-1" id="im1" style="width: 100%;height: 75px;margin: 0;padding: 0;">
-            <a href="http://www.facebook.com"><img src="dist/images/header-facebook.png" alt=""></a>
+        <section class="col-1" id="cusIcon" style="width: 100%;height: 75px;margin: 0;padding: 0;">
+            <img src="dist/images/add.png" alt="">
         </section>
-        <section class="col-1" id="im2" style="width: 100%;height: 75px;margin: 0;padding: 0;">
-            <a href="https://www.flickr.com/"><img src="dist/images/header-flickr.png" alt=""></a>
+        <section class="col-1" id="orderIcon" style="width: 100%;height: 75px;margin: 0;padding: 0;">
+           <img src="dist/images/order-food.png" alt="">
         </section>
         <section class="col-1" id="im3" style="width: 100%;height: 75px;margin: 0;padding: 0;">
             <a href="https://www.instagram.com"><img src="dist/images/header-instagram.png" alt=""></a>
@@ -114,22 +114,6 @@
 </section>
 
 
-<section class="row" style="padding: 0;margin: 0;width: 100%;height: 1000px;">
-
-    <div class="card" style="height: 750px;width: 50%">
-        <img class="card-img-top" src="dist/images/03307-1-HomepageVersionA_PhillyKing_2220x920px_CR.jpg" alt="Card image cap" style="height: 750px;">
-        <div class="row card-body carousel-caption d-md-block" type="button" style="background-color: hsla(360, 100%, 100%, 0.62);width: 100%;margin: 0;padding: 0;left: 0">
-        </div>
-    </div>
-
-    <div class="card" style="height: 750px;width: 50%">
-        <img class="card-img-top" src="dist/images/bk_wd_bk-com_tiles_1080x770_v04.jpg" alt="Card image cap" style="height: 750px;">
-        <div class="row card-body carousel-caption d-md-block" type="button" style="background-color: hsla(360, 100%, 100%, 0.62);width: 100%;margin: 0;padding: 0;left: 0">
-        </div>
-    </div>
-
-</section>
-
 
 <section class="row justify-content-center" style="padding: 0;margin: 0;width: 100%;height: 400px;">
 
@@ -139,36 +123,14 @@
         </div>
         <br>
         <br>
-        <table class="table table-striped">
-            <thead>
-            <tr>
-                <th scope="col"></th>
-                <th scope="col">Catagory</th>
-                <th scope="col">Description</th>
-                <th scope="col">Price</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            </tbody>
-        </table>
+        <ul class="thumbnails">
+            <li class="span4">
+                <a href="#" class="thumbnail">
+                    <img data-src="thumb.jpg" alt="">
+                </a>
+            </li>
+            ...
+        </ul>
     </div>
 
 
@@ -216,92 +178,205 @@
     </div>
 </section>
 
-<section class="row justify-content-center" style="padding: 0;margin: 0;width: 100%;height: 500px;">
-    <section class="row" style="padding: 0;margin: 0;width: 100%;height: 25px;"></section>
-    <section class="row" style="padding: 0;margin: 0;width: 100%;height: 450px;">
-        <section class="col-2" style="padding: 0;margin: 0;width: 100%;height: 450px;"></section>
-        <section class="col-8" id="form1" style="padding: 0;margin: 0;width: 100%;height: 450px;border-radius: 20px;">
-            <!--<section class="row container" style="padding: 0;margin: 0;width: 100%;height: 450px;">-->
+<!--<section class="row justify-content-center" style="padding: 0;margin: 0;width: 100%;height: 500px;">-->
+    <!--<section class="row" style="padding: 0;margin: 0;width: 100%;height: 25px;"></section>-->
+    <!--<section class="row" style="padding: 0;margin: 0;width: 100%;height: 450px;">-->
+        <!--<section class="col-2" style="padding: 0;margin: 0;width: 100%;height: 450px;"></section>-->
+        <!--<section class="col-8" id="form1" style="padding: 0;margin: 0;width: 100%;height: 450px;border-radius: 20px;">-->
+            <!--&lt;!&ndash;<section class="row container" style="padding: 0;margin: 0;width: 100%;height: 450px;">&ndash;&gt;-->
+                <!--&lt;!&ndash;<section class="col-6" style="padding: 0;margin: 0;width: 100%;height: 450px;">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<section class="row" style="padding: 0;margin: 0;width: 100%;height: 400px;">&ndash;&gt;-->
+                        <!--<form id="customerForm" class="form-group">-->
+                            <!--<fieldset class="scheduler-border">-->
+                            <!--<legend class="scheduler-border"> Register Customer </legend>-->
+
+                                    <!--<label for="customerName">Customer Name</label>-->
+                                    <!--<input type="text" placeholder="Customer Name" name="customerName" id="customerName" style="width: 80%">-->
+
+                                    <!--<label for="customerAddress">Customer Address</label>-->
+                                    <!--<input type="text" placeholder="Customer Address" name="customerAddress" id="customerAddress" style="width: 80%">-->
+
+                                    <!--<label for="customerMobile">Customer Mobile</label>-->
+                                    <!--<input type="text" placeholder="Customer Mobile" name="customerMobile" id="customerMobile" style="width: 80%">-->
+
+                                    <!--<label for="customerEmail">Customer Email</label>-->
+                                    <!--<input type="text" placeholder="Customer Email" name="customerEmail" id="customerEmail" style="width: 80%">-->
+
+                                    <!--<label for="userPassword">Customer Password</label>-->
+                                    <!--<input type="text" placeholder="Customer Password" name="userPassword" id="userPassword" style="width: 80%">-->
+
+
+                                <!--<br>-->
+                                <!--<br>-->
+                                <!--<button id="registerBtn" type="button" class="btn btn-info" style="width: 80%">Register..</button>-->
+                            <!--</fieldset>-->
+                        <!--</form>-->
+                    <!--</section>-->
+                <!--</section>-->
                 <!--<section class="col-6" style="padding: 0;margin: 0;width: 100%;height: 450px;">-->
+                    <!--<section class="row" style="padding: 0;margin: 0;width: 100%;height: 50px;"></section>-->
                     <!--<section class="row" style="padding: 0;margin: 0;width: 100%;height: 400px;">-->
-                        <form id="customerForm" class="form-group">
-                            <fieldset class="scheduler-border">
-                            <legend class="scheduler-border"> Register Customer </legend>
+                    <!--</section>-->
+                <!--</section>-->
+            <!--&lt;!&ndash;</section>&ndash;&gt;-->
+        <!--&lt;!&ndash;</section>&ndash;&gt;-->
+        <!--<section class="col-2" style="padding: 0;margin: 0;width: 100%;height: 450px;"></section>-->
+    <!--&lt;!&ndash;</section>&ndash;&gt;-->
+    <!--<section class="row" style="padding: 0;margin: 0;width: 100%;height: 25px;"></section>-->
+<!--</section>-->
+<!--Create new task-->
+<div class="modal fade" id="customerModel" tabindex="-1" role="dialog" aria-labelledby="newTask" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
 
-                                    <label for="customerName">Customer Name</label>
-                                    <input type="text" placeholder="Customer Name" name="customerName" id="customerName" style="width: 80%">
-
-                                    <label for="customerAddress">Customer Address</label>
-                                    <input type="text" placeholder="Customer Address" name="customerAddress" id="customerAddress" style="width: 80%">
-
-                                    <label for="customerMobile">Customer Mobile</label>
-                                    <input type="text" placeholder="Customer Mobile" name="customerMobile" id="customerMobile" style="width: 80%">
-
-                                    <label for="customerEmail">Customer Email</label>
-                                    <input type="text" placeholder="Customer Email" name="customerEmail" id="customerEmail" style="width: 80%">
-
-                                    <label for="userPassword">Customer Password</label>
-                                    <input type="text" placeholder="Customer Password" name="userPassword" id="userPassword" style="width: 80%">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalLabel">Register Customer</h5>
 
 
-                                <br>
-                                <br>
-                                <button id="registerBtn" type="button" class="btn btn-info" style="width: 80%">Register..</button>
-                            </fieldset>
-                        </form>
-                    </section>
-                </section>
-                <section class="col-6" style="padding: 0;margin: 0;width: 100%;height: 450px;">
-                    <section class="row" style="padding: 0;margin: 0;width: 100%;height: 50px;"></section>
-                    <section class="row" style="padding: 0;margin: 0;width: 100%;height: 400px;">
-                    </section>
-                </section>
-            <!--</section>-->
-        <!--</section>-->
-        <section class="col-2" style="padding: 0;margin: 0;width: 100%;height: 450px;"></section>
-    <!--</section>-->
-    <section class="row" style="padding: 0;margin: 0;width: 100%;height: 25px;"></section>
-</section>
+            </div>
+            <div class="modal-body">
 
-<div class="container align-content-center" style="margin-bottom: 0%">
-    <div class="row justify-content-center">
-        <form style="width: 100%">
-            <fieldset class="scheduler-border">
+
+                <div class="row">
+                    <div class="col col-md-12">
+                        <div class="form-group">
+
+                            <label>Customer Name</label>
+
+                            <textarea class="form-control"  name="comment" id="cusName"  placeholder=""></textarea>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-md-12">
+                        <div class="form-group">
+
+                            <label>Customer Address</label>
+
+                            <textarea class="form-control"  name="comment" id="address"  placeholder=""></textarea>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-md-12">
+                        <div class="form-group">
+
+                            <label>Customer Mobile</label>
+
+                            <textarea class="form-control"  name="comment" id="mobile"  placeholder=""></textarea>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-md-12">
+                        <div class="form-group">
+
+                            <label>Email</label>
+
+                            <textarea class="form-control"  name="comment" id="email"  placeholder=""></textarea>
+
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="col-4 col-md-4">
+
+                        <div class="form-group">
+
+                            <label  for="datetimepicker_start" >Birthday</label>
+
+                            <div class="form-group">
+                                <div class='input-group date' id='datetimepicker_start'>
+                                    <input type='text' class="form-control" id="STdate" />
+                                    <span class="input-group-addon">
+                                                                <span class="glyphicon glyphicon-calendar"></span>
+                                                            </span>
+                                </div>
+                            </div>
+
+                            <script type="text/javascript">
+                                $(function () {
+                                    $('#datetimepicker_start').datetimepicker({
+                                        format: 'Y/M/D',
+                                        defaultDate: new Date()
+
+                                    });
+
+                                });
+
+                            </script>
+                        </div>
+
+                    </div>
+                </div>
+
+            <div class="modal-footer">
+                <div class="span pull-left">
+                    <div class="alert alert-danger fade">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        <strong id="error">Alert!</strong> Please fill all fields.
+                    </div>
+                </div>
+                <button class="btn btn-secondary"  data-dismiss="modal" aria-hidden="true">Cancel</button>
+                <button id="saveTask" type="button" value="Saveadmin" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- end customer model-->
+
+<!-- Order model-->
+
+<div id="createOrder" class="modal fade" role="dialog">
+    <div class="modal-dialog" role="document" style="width: 90%">
+        <div class="modal-content">
+            <div class="modal-header">
                 <legend class="scheduler-border"> Recipient Details </legend>
-                <div class="form-row">
-                    <div class="col">
-                        <div class="row">
-                            <div class="col">
-                                <div class="form-row">
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col col-md-6">
+                        <div class="form-group">
+                            <label for="orderCustomerID">Customer ID</label>
+                            <input type="text" class="form-control" name="orderCustomerID" id="orderCustomerID" placeholder="Customer ID">
+                        </div>
+                    </div>
+                    <div class="col col-md-6">
+                        <div class="form-group">
+                            <label for="orderCustomerName">Customer Name</label>
+                            <input type="text" class="form-control" name="orderCustomerName" id="orderCustomerName" placeholder="Customer Name">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-md-6">
+                        <div class="form-group">
+                            <label for="orderItemID">Food Name</label>
+                            <select class="form-control" name="OrderItems" id="OrderItemsName"></select>
 
-                                    <div class="form-group col">
-                                        <label for="orderCustomerID">Customer ID</label>
-                                        <input type="text" class="form-control" name="orderCustomerID" id="orderCustomerID" placeholder="Customer ID">
-                                    </div>
+                        </div>
+                    </div>
+                    <div class="col col-md-3">
+                        <div class="form-group">
+                            <label for="orderItemID">Food ID</label>
+                            <input type="text" class="form-control" name="orderItemID" id="orderItemID" placeholder="Food ID" style="width: 268px">
+                        </div>
+                    </div>
 
-                                    <div class="col cmb-3">
-                                        <label for="orderCustomerName">Customer Name</label>
-                                        <input type="text" class="form-control" name="orderCustomerName" id="orderCustomerName" placeholder="Customer Name">
-                                    </div>
-
-                                </div>
-
-                                <div class="form-row">
-
-                                    <div class="form-group col">
-
-                                        <label for="orderItemID">Food Name</label>
-                                        <select class="form-control" name="OrderItems" id="OrderItemsName"></select>
-
-                                    </div>
-
-                                    <div class="col-md-3">
-                                        <label for="orderItemID">Food ID</label>
-                                        <input type="text" class="form-control" name="orderItemID" id="orderItemID" placeholder="Food ID" style="width: 268px">
-
-                                    </div>
-
-                                </div>
+                </div>
 
                                 <div class="form-group">
                                     <label for="orderItemPrice">Food Price</label>
@@ -322,35 +397,28 @@
                                     <label for="orderTotalPrice">Amount</label>
                                     <input type="number" class="form-control" name="orderTotalPrice" id="orderTotalPrice"  placeholder="Quentity" style="width: 400px">
                                 </div>
-
-
-                                <div class="row justify-content-center">
-                                    <button class="btn btn-success" type="button" id="getOrder" style="margin-top: 10px">Get Order</button>
-                                    <br>
-                                    <br>
-                                    <button class="btn btn-danger" type="button" id="getOrder" style="margin-top: 10px">Cancel Order</button>
+                            </div>
+                                <div class="modal-footer">
+                                    <button  type="button" class="btn btn-danger" data-dismiss="modal">Cancel Order</button>
+                                    <button id="saveOrder" type="button" class="btn btn-primary" >Get Order</button>
 
                                 </div>
 
-                            </div>
 
-                        </div>
-                    </div>
-                </div>
-            </fieldset>
-        </form>
+        </div>
     </div>
 
 </div>
-
+<!-- end order model-->
 <div id="createUser" class="modal fade" role="dialog">
     <div class="modal-dialog modal-sm">
 
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
+
+                <h4 class="modal-title" id="exampleModalLabel">Create New User   </h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title" id="exampleModalLabel">Create New User</h4>
             </div>
             <div class="modal-body">
                 <div class="row">
@@ -416,9 +484,26 @@
 <script type="text/javascript">
 
     $(document).ready(function() {
+
+        //sign up click function
+        $('#SignUp').click(function () {
+            $('#createUser').modal('show');
+        });
+
+        //add customer click function
+        $('#cusIcon').click(function () {
+            $('#customerModel').modal('show');
+        });
+
+        //add customer click function
+        $('#orderIcon').click(function () {
+            $('#createOrder').modal('show');
+        });
+
+
     //register btn click event
 
-        
+
         $('#registerBtn').click(function () {
             let cusForm=$('#customerForm').serialize();
             $.ajax({
@@ -538,9 +623,7 @@
 
     });
 
-        $('#SignUp').click(function () {
-            $('#createUser').modal('show');
-        });
+
 
     $('#getOrder').click(function () {
         let orderForm=$('#OrderForm').serialize();
@@ -554,6 +637,8 @@
         });
     });
     });
+
+
 </script>
 
 <footer>
