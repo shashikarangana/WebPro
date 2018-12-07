@@ -414,27 +414,30 @@
 <script src="dist/js/jquery-3.3.1.min.js"></script>
 <script src="dist/js/bootstrap.min.js" rel="script" type="text/javascript"></script>
 <script type="text/javascript">
+
     $(document).ready(function() {
-    $('#registerBtn').click(function () {
-        let cusForm=$('#customerForm').serialize();
-        $.ajax({
+    //register btn click event
+        $('#registerBtn').click(function () {
+            let cusForm=$('#customerForm').serialize();
+            $.ajax({
             url:"api/service/CustomerService.php",
             method:"POST",
             async:true,
             data:cusForm
-        }).done(function (res) {
-            alert(res);
-        });
-        $.ajax({
-            url:"api/service/FoodService.php",
-            method:"GET",
-            async:true,
-            dataType:"json"
-        }).done(function (resp) {
-            $('#OrderItemsName').empty();
-            for (var i in resp){
-                var temp=resp[i];
-                $('#OrderItemsName').append("<option>"+ temp[1] +"</option><br>");
+            }).done(function (res) {
+                alert(res);
+            });
+            $.ajax({
+                url:"api/service/FoodService.php",
+                method:"GET",
+                async:true,
+                dataType:"json"
+            }).done(function (resp) {
+
+                $('#OrderItemsName').empty();
+                    for (var i in resp){
+                    var temp=resp[i];
+                    $('#OrderItemsName').append("<option>"+ temp[1] +"</option><br>");
             }
         })
     });
