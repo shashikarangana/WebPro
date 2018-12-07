@@ -25,25 +25,54 @@
             /*background:url("dist/images/1.jpg");*/
                         background-size: cover;
         }
+
+        .navbar-text {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            text-align: center;
+            text-color: white;
+            margin: auto;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
     </style>
+
 </head>
 <body>
-<div class="pos-f-t">
-    <div class="collapse" id="navbarToggleExternalContent">
-        <div class="bg-dark py-sm-5">
-            <h5 class="text-white h4">MY BURGER</h5>
-            <span class="text-muted">Toggleable via the navbar brand.</span>
+<!--<div class="pos-f-t">-->
+    <!--<div class="collapse" id="navbarToggleExternalContent">-->
+        <!--<div class="bg-dark py-sm-5">-->
+            <!--<h5 class="text-white h4">MY BURGER</h5>-->
+            <!--<span class="text-muted">Toggleable via the navbar brand.</span>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<nav class="navbar navbar-dark bg-dark">-->
+        <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">-->
+            <!--<span class="navbar-toggler-icon"></span>-->
+        <!--</button>-->
+    <!--</nav>-->
+<!--</div>-->
+
+
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+
+            </button>
+            <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span></a>
+            <h5 class="navbar-text">MY BURGER</h5>
+            <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span></a>
         </div>
     </div>
-    <nav class="navbar navbar-dark bg-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
     </nav>
-</div>
 <section class="row" id="ph1" style="padding: 0;margin: 0;width: 100%;height: 950px;">
     <!--<img src="dist/images/03307-1-HomepageVersionA_PhillyKing_2220x920px_CR.jpg" alt="" style="width: 100%;height: 550px">-->
-    <section class="align-content-center" style="width: 100%;height: 75px;margin: 0;padding: 0;">
+    <section class="align-content-center" style="width: 100%;height: 75px;margin: 20px;padding: 0;">
         <section class="col-1" id="cusIcon" style="width: 100%;height: 75px;margin: 0;padding: 0;">
             <img src="dist/images/add.png" alt="">
         </section>
@@ -224,7 +253,7 @@
     <!--&lt;!&ndash;</section>&ndash;&gt;-->
     <!--<section class="row" style="padding: 0;margin: 0;width: 100%;height: 25px;"></section>-->
 <!--</section>-->
-<!--Create new task-->
+<!--Create new customer-->
 <div class="modal fade" id="customerModel" tabindex="-1" role="dialog" aria-labelledby="newTask" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -332,9 +361,9 @@
 
 
         </div>
-    </div>
-</div>
-</div>
+    <!--</div>-->
+<!--</div>-->
+<!--</div>-->
 
 <!-- end customer model-->
 
@@ -362,36 +391,50 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col col-md-6">
+                    <div class="col col-md-12">
                         <div class="form-group">
                             <label for="orderItemID">Food Name</label>
                             <select class="form-control" name="OrderItems" id="OrderItemsName"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                        <div class="col col-md-6">
+                        <div class="form-group">
+                            <label for="orderItemID">Food ID</label>
+                            <input type="text" class="form-control" name="orderItemID" id="orderItemID" placeholder="Food ID" style="width: 200px">
 
                         </div>
                     </div>
-                    <div class="col col-md-3">
+                    <div class="col col-md-6">
                         <div class="form-group">
-                            <label for="orderItemID">Food ID</label>
-                            <input type="text" class="form-control" name="orderItemID" id="orderItemID" placeholder="Food ID" style="width: 268px">
+
+                            <label for="orderItemPrice">Food Price</label>
+                            <input type="number" class="form-control" name="orderItemPrice" id="orderItemPrice"  placeholder="Food Price">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="col col-md-6">
+                        <div class="form-group">
+                            <label for="orderQuantity">Order Quentity</label>
+                            <input type="number" class="form-control" name="orderQuantity" id="orderQuantity"  placeholder="Order Quentity" style="width: 200px">
+                        </div>
+                    </div>
+                    <div class="col col-md-6">
+                        <div class="form-group">
+
+                            <label for="OrderDate">Order date</label>
+                            <input type="date" class="form-control" name="OrderDate" id="OrderDate"  placeholder="" style="width: 200px">
                         </div>
                     </div>
 
                 </div>
 
-                                <div class="form-group">
-                                    <label for="orderItemPrice">Food Price</label>
-                                    <input type="number" class="form-control" name="orderItemPrice" id="orderItemPrice"  placeholder="Food Price">
-                                </div>
 
-                                <div class="form-group">
-                                    <label for="orderQuantity">Order Quentity</label>
-                                    <input type="number" class="form-control" name="orderQuantity" id="orderQuantity"  placeholder="Order Quentity" style="width: 200px">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="OrderDate">Order date</label>
-                                    <input type="date" class="form-control" name="OrderDate" id="OrderDate"  placeholder="" style="width: 400px">
-                                </div>
 
                                 <div class="form-group">
                                     <label for="orderTotalPrice">Amount</label>
@@ -410,6 +453,7 @@
 
 </div>
 <!-- end order model-->
+
 <div id="createUser" class="modal fade" role="dialog">
     <div class="modal-dialog modal-sm">
 
