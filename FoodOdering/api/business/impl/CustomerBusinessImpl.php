@@ -19,16 +19,16 @@ class CustomerBusinessImpl implements CustomerBusiness
         $connection->autocommit(false);
         try {
             $cust=new Customer($loginCus->getCid(),$loginCus->getCname(),$loginCus->getCaddress(),$loginCus->getCmobile(),$loginCus->getCemail());
-            $log=new Login($loginCus->getCname(),$loginCus->getUserPassword());
+            //$log=new Login($loginCus->getCname(),$loginCus->getUserPassword());
             $result = $customerRepo->addCustomer($cust);
             if (!$result) {
                 return false;
             }
-            $result = $loginRepo->addLogUSer($log);
-            if (!$result) {
-                $connection->rollback();
-                return false;
-            }
+//            $result = $loginRepo->addLogUSer($log);
+//            if (!$result) {
+//                $connection->rollback();
+//                return false;
+//            }
             $connection->commit();
             return true;
         }finally {

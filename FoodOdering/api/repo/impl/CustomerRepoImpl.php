@@ -23,12 +23,12 @@ class CustomerRepoImpl implements CustomerRepo
         $this->connection=$connection;
     }
 
-    public function addCustomer(Customer $customer): String
+    public function addCustomer(Customer $customer): bool
     {
        // echo "I love you"+$customer->getCid()+" "+$customer->getCname()+" "+$customer->getCaddress()+" "+$customer->getCmobile()+" "+$customer->getCemail();
-        $resp=$this->connection->query("insert into Customer values ({$customer->getCid()},'{$customer->getCname()}','{$customer->getCaddress()}',
-                {$customer->getCmobile()},'{$customer->getCemail()}')");
-        echo $resp+"";
+        $resp=$this->connection->query("insert into Customer values ('{$customer->getCid()}','{$customer->getCname()}','{$customer->getCaddress()}',
+                '{$customer->getCmobile()}','{$customer->getCemail()}')");
+        return $resp;
     }
 
     public function deleteCustomer(string $id): bool
