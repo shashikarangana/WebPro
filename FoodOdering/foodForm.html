@@ -6,7 +6,36 @@
     <link rel="stylesheet" href="dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="dist/css/Index.css">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+
+    <link rel="stylesheet" href="dist/css/normalize.css">
+
+    <style>
+        header {
+            height: 300px;
+            background:url("dist/images/banner-2.jpg");
+
+        }
+
+        /*footer {*/
+            /*background-color: black;*/
+            /*color: white;*/
+            /*font-size: 20px;*/
+            /*width: 100%;*/
+            /*position: absolute;*/
+            /*bottom: 0;*/
+        /*}*/
+
+        footer h4 {
+            text-align: center;
+        }
+
+
+    </style>
 </head>
+
+<header>
+
+</header>
 <body>
 <div class="row justify-content-center">
     <form id="foodForm" style="width: 60%">
@@ -33,14 +62,14 @@
 
                             <div class="form-group">
                                 <label for="description">Description</label>
-                                <input type="text" name="Food Code" class="form-control" id="description" placeholder="Description">
+                                <input type="text" name="description" class="form-control" id="description" placeholder="Description">
                             </div>
 
 
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="price">Food Price</label>
-                                    <input type="text" name="FoodCode" class="form-control" id="price" placeholder="Food Price">
+                                    <input type="text" name="price" class="form-control" id="price" placeholder="Food Price">
                                 </div>
                             </div>
 
@@ -69,11 +98,23 @@
             url: "api/service/FoodService.php",
             method: "POST",
             async: true,
-            data: cusForm
+            data: foodForm
         }).done(function (res) {
             alert(res);
         });
     });
 </script>
+
+<footer>
+    <div class="pos-f-t">
+        <nav class="navbar navbar-dark bg-dark">
+            <button class="navbar-toggler j" type="text" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <h5 class="text-white h4">VISIT US</h5>
+                <span class="text-white">  Open Hours - 11.00AM - 11.00PM </span>
+                <span class="text-white"> | No.07, Shurberry Garden, Bambalapitiya </span>
+            </button>
+        </nav>
+    </div>
+</footer>
 </body>
 </html>

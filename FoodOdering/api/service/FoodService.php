@@ -11,10 +11,10 @@ switch ($method){
         break;
 
     case "POST":
-        $fid=$_POST["FoodId"];
+        $fid=$_POST["FoodCode"];
         $fname=$_POST["FoodName"];
-        $price=$_POST["Price"];
-        $description=$_POST["Description"];
+        $price=$_POST["price"];
+        $description=$_POST["description"];
 
         switch ($operation){
             case "Save":
