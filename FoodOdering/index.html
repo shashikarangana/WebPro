@@ -223,7 +223,7 @@
                                     <!--<input type="text" placeholder="Customer Name" name="customerName" id="customerName" style="width: 80%">-->
 
                                     <!--<label for="customerAddress">Customer Address</label>-->
-                                    <!--<input type="text" placeholder="Customer Address" name="customerAddress" id="customerAddress" style="width: 80%">-->
+                <!--<input type="text" placeholder="Customer Address" name="customerAddress" id="customerAddress" style="width: 80%">-->
 
                                     <!--<label for="customerMobile">Customer Mobile</label>-->
                                     <!--<input type="text" placeholder="Customer Mobile" name="customerMobile" id="customerMobile" style="width: 80%">-->
@@ -259,20 +259,22 @@
         <div class="modal-content">
 
             <div class="modal-header">
-                <h5 class="modal-title" id="ModalLabel">Register Customer</h5>
+                <h5 class="modal-title" id="ModalLabel">CUSTOMER</h5>
 
 
             </div>
             <div class="modal-body">
 
-
+                <form id="customerForm" class="form-group">
+                    <fieldset class = "scheduler-border">
+                        <legend class="scheduler-border"> Register Customer </legend>
                 <div class="row">
                     <div class="col col-md-12">
                         <div class="form-group">
 
                             <label>Customer Name</label>
 
-                            <textarea class="form-control"  name="comment" id="cusName"  placeholder=""></textarea>
+                            <textarea class="form-control"  name="comment" id="cname"  placeholder=""></textarea>
 
                         </div>
                     </div>
@@ -284,7 +286,7 @@
 
                             <label>Customer Address</label>
 
-                            <textarea class="form-control"  name="comment" id="address"  placeholder=""></textarea>
+                            <textarea class="form-control"  name="comment" id="caddress"  placeholder=""></textarea>
 
                         </div>
                     </div>
@@ -296,7 +298,7 @@
 
                             <label>Customer Mobile</label>
 
-                            <textarea class="form-control"  name="comment" id="mobile"  placeholder=""></textarea>
+                            <textarea class="form-control"  name="comment" id="cmobile"  placeholder=""></textarea>
 
                         </div>
                     </div>
@@ -308,7 +310,7 @@
 
                             <label>Email</label>
 
-                            <textarea class="form-control"  name="comment" id="email"  placeholder=""></textarea>
+                            <textarea class="form-control"  name="comment" id="cemail"  placeholder=""></textarea>
 
                         </div>
                     </div>
@@ -318,10 +320,10 @@
 
                         <div class="form-group">
 
-                            <label  for="datetimepicker_start" >Birthday</label>
+                            <label  for="userPassword" >Birthday</label>
 
                             <div class="form-group">
-                                <div class='input-group date' id='datetimepicker_start'>
+                                <div class='input-group date' id='userPassword'>
                                     <input type='text' class="form-control" id="STdate" />
                                     <span class="input-group-addon">
                                                                 <span class="glyphicon glyphicon-calendar"></span>
@@ -343,6 +345,8 @@
                         </div>
 
                     </div>
+                    </fieldset>
+                </form>
                 </div>
 
             <div class="modal-footer">
@@ -353,7 +357,7 @@
                     </div>
                 </div>
                 <button class="btn btn-secondary"  data-dismiss="modal" aria-hidden="true">Cancel</button>
-                <button id="saveTask" type="button" value="Saveadmin" class="btn btn-primary">Save</button>
+                <button id="registerBtn" type="button" value="Saveadmin" class="btn btn-primary">Save</button>
             </div>
         </div>
 
@@ -548,26 +552,26 @@
         $('#registerBtn').click(function () {
             let cusForm=$('#customerForm').serialize();
             $.ajax({
-            url:"api/service/CustomerService.php",
-            method:"POST",
-            async:true,
-            data:cusForm
+                url:"api/service/CustomerService.php",
+                method:"POST",
+                async:true,
+                data:cusForm
             }).done(function (res) {
                 alert(res);
             });
-            $.ajax({
-                url:"api/service/FoodService.php",
-                method:"GET",
-                async:true,
-                dataType:"json"
-            }).done(function (resp) {
-
-                $('#OrderItemsName').empty();
-                    for (var i in resp){
-                    var temp=resp[i];
-                    $('#OrderItemsName').append("<option>"+ temp[1] +"</option><br>");
-            }
-        })
+        //     $.ajax({
+        //         url:"api/service/FoodService.php",
+        //         method:"GET",
+        //         async:true,
+        //         dataType:"json"
+        //     }).done(function (resp) {
+        //
+        //         $('#OrderItemsName').empty();
+        //             for (var i in resp){
+        //             var temp=resp[i];
+        //             $('#OrderItemsName').append("<option>"+ temp[1] +"</option><br>");
+        //     }
+        // })
     });
 
     $('#LoginBTN').click(function () {

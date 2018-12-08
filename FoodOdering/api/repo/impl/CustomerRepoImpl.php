@@ -25,7 +25,7 @@ class CustomerRepoImpl implements CustomerRepo
 
     public function addCustomer(Customer $customer): bool
     {
-        echo "wdfgrh";
+       // echo "I love you"+$customer->getCid()+" "+$customer->getCname()+" "+$customer->getCaddress()+" "+$customer->getCmobile()+" "+$customer->getCemail();
         $resp=$this->connection->query("insert into Customer values ('{$customer->getCid()}','{$customer->getCname()}','{$customer->getCaddress()}',
                 '{$customer->getCmobile()}','{$customer->getCemail()}')");
         return $resp;

@@ -13,18 +13,22 @@ switch ($method){
         echo json_encode($customerBO->getAllCustomers());
         break;
     case "POST":
-        $id=0;
-        $name=$_POST["customerName"];
-        $address=$_POST["customerAddress"];
-        $mobile=$_POST["customerMobile"];
-        $email=$_POST["customerEmail"];
-        $password=$_POST["userPassword"];
+        $cid=0;
+        //$name=$_POST["cname"];
+        $cname='sm';
+        //$address=$_POST["caddress"];
+        $caddress='asd';
+        //$mobile=$_POST["cmobile"];
+        $cmobile=12345;
+        //$email=$_POST["cemail"];
+        $cemail='asd@gmail.com';
+        $password='123';
 //
 //        switch ($operartion){
 //            case "add":
 //                $login=new Login($name,$password);
 //                $customer=new Customer($id,$name,$address,$mobile,$email);
-                $logincus=new LoginCus($id,$name,$address,$mobile,$email,$password);
+                $logincus=new LoginCus($cid,$cname,$caddress,$cmobile,$cemail,$password);
                 $result=$customerBO->addCustomer($logincus);
                 break;
         }
