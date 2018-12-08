@@ -6,7 +6,7 @@ interface CustomerRepo
 {
     public function setConnection(mysqli $connection): void;
 
-    public function addCustomer(Customer $customer): bool;
+    public function addCustomer(Customer $customer): String;
 
     public function deleteCustomer(string $id): bool;
 
