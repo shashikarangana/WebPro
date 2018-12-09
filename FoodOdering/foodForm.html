@@ -72,9 +72,9 @@
                                     <input type="text" name="price" class="form-control" id="price" placeholder="Food Price">
                                 </div>
                             </div>
-
+                            <button class="btn btn-danger" id="cancel" type="button" style ="margin: 8px">Cancel</button>
                             <!--<button type="button" id="btnFoodSave" onclick="test();" style="margin-top: 10px ;width: 20%"  class="btn btn-success" >Save</button>-->
-                            <button type="button" id="btnFoodSave" style="margin-top: 10px ;width: 20%"  class="btn btn-success" >Save</button>
+                            <button type="button" id="btnFoodSave" style="margin: 8px ;width: 20%"  class="btn btn-success" >Save</button>
 
                         </div>
                     </div>
@@ -92,9 +92,10 @@
 
 
 <script type="text/javascript">
-    // function test() {
-    //     alert(123);
-    // }
+
+    $('#cancel').click(function () {
+        window.location.href = 'index.html';
+    });
     $('#btnFoodSave').click(function () {
     //alert(123);
         let foodForm = $('#foodForm').serializeArray();
