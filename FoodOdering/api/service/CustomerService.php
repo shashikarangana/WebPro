@@ -23,7 +23,7 @@ switch ($method){
     case "POST":
         switch ($post_op){
             case "Add":
-                $cid=0;
+                $cid='1';
                 $name=$_POST["CusName"];
                 $address=$_POST["CusAddress"];
                 $mobile=$_POST["CusMobile"];

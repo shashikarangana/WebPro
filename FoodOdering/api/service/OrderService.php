@@ -9,17 +9,18 @@ $orderBOImpl=new OrderBusinessImpl();
 $method=$_SERVER["REQUEST_METHOD"];
 switch ($method){
     case "POST":
-        $pid=0;
+        $pid='1';
         $price=$_POST["orderTotalPrice"];
-        $oid=0;
+        $oid='2';
         $cid=$_POST["orderCustomerID"];
         $fid=$_POST["orderItemID"];
         $quantity=$_POST["orderQuantity"];
         $ordate=$_POST["OrderDate"];
 
         $cusOrder=new CusOrder($oid,$cid,$fid,$pid,$quantity,$ordate,$price);
-        echo $price;
-        echo $cid,$fid,$quantity;
+        //echo $price;
+        //echo $cid,$fid,$quantity;
         $result=$orderBOImpl->addOrder($cusOrder);
+        echo $result;
         break;
 }
