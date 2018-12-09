@@ -38,7 +38,7 @@ class Customer
     /**
      * @param mixed $cid
      */
-    public function setCid($cid): void
+    public function setCid($cid)
     {
         $this->cid = $cid;
     }
@@ -54,7 +54,7 @@ class Customer
     /**
      * @param mixed $cname
      */
-    public function setCname($cname): void
+    public function setCname($cname)
     {
         $this->cname = $cname;
     }
@@ -70,7 +70,7 @@ class Customer
     /**
      * @param mixed $caddress
      */
-    public function setCaddress($caddress): void
+    public function setCaddress($caddress)
     {
         $this->caddress = $caddress;
     }
@@ -86,7 +86,7 @@ class Customer
     /**
      * @param mixed $cmobile
      */
-    public function setCmobile($cmobile): void
+    public function setCmobile($cmobile)
     {
         $this->cmobile = $cmobile;
     }
@@ -102,7 +102,7 @@ class Customer
     /**
      * @param mixed $cemail
      */
-    public function setCemail($cemail): void
+    public function setCemail($cemail)
     {
         $this->cemail = $cemail;
     }

@@ -50,13 +50,13 @@
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="foodCode">Food Code</label>
-                                    <input type="text" name="FoodCode" class="form-control" id="foodCode" placeholder="Food Code">
+                                    <input type="text" name="FoodCode" class="form-control" id="FoodCode" placeholder="Food Code">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="foodName">Food Name</label>
-                                <input type="text" name="FoodName" class="form-control" id="foodName" placeholder="Food Name">
+                                <input type="text" name="FoodName" class="form-control" id="FoodName" placeholder="Food Name">
                             </div>
 
 
@@ -73,7 +73,7 @@
                                 </div>
                             </div>
 
-                            <button type="button" id="btnFoodSave" style="margin-top: 10px ;width: 20%"  class="btn btn-success" >Save</button>
+                            <button type="button" id="btnFoodSave" onclick="test();" style="margin-top: 10px ;width: 20%"  class="btn btn-success" >Save</button>
 
                         </div>
                     </div>
@@ -86,23 +86,28 @@
 
 
 
-<script src="dist/js/jquery-3.3.1.min.js"></script>
-<script src="dist/js/bootstrap.min.js" rel="script" type="text/javascript"></script>
+<script type="application/javascript" src="dist/js/jquery-3.3.1.min.js"></script>
+<script type="application/javascript" src="dist/js/bootstrap.min.js"></script>
 
 
 <script type="text/javascript">
 
-    $('#btnFoodSave').click(function () {
-        let foodForm = $('#foodForm').serialize();
-        $.ajax({
-            url: "api/service/FoodService.php",
-            method: "POST",
-            async: true,
-            data: foodForm
-        }).done(function (res) {
-            alert(res);
-        });
-    });
+    //$('#btnFoodSave').click(function () {
+    function test() {
+        alert(123);
+        // let foodForm = $('#foodForm').serializeArray();
+        // foodForm.push({name:"operation",value:"Save"});
+        // alert(456)
+        // $.ajax({
+        //      url: "api/service/FoodService.php",
+        //      method: "POST",
+        //      async: true,
+        //      data: foodForm
+        //  }).done(function (res) {
+        //      alert(res);
+        //  });
+        // });
+    }
 </script>
 
 <footer>

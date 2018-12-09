@@ -10,12 +10,12 @@ class CustomerRepoImpl implements CustomerRepo
     /**
      * CustomerRepoImpl constructor.
      */
-    public function __construct()
-    {
-        $connection=(new DBConnection())->getDBConnection();
-        $this->connection=$connection;
-
-    }
+//    public function __construct()
+//    {
+//        $connection=(new DBConnection())->getDBConnection();
+//        $this->connection=$connection;
+//
+//    }
 
 
     public function setConnection(mysqli $connection): void
@@ -26,10 +26,13 @@ class CustomerRepoImpl implements CustomerRepo
     public function addCustomer(Customer $customer): bool
     {
        // echo "I love you"+$customer->getCid()+" "+$customer->getCname()+" "+$customer->getCaddress()+" "+$customer->getCmobile()+" "+$customer->getCemail();
-        $resp=$this->connection->query("insert into Customer values ('{$customer->getCid()}','{$customer->getCname()}','{$customer->getCaddress()}',
-                '{$customer->getCmobile()}','{$customer->getCemail()}')");
+        $resp=$this->connection->
+        query(
+            "INSERT INTO Customer VALUES ({$customer->getCid()},'{$customer->getCname()}','{$customer->getCaddress()}',
+                {$customer->getCmobile()},'{$customer->getCemail()}')");
         return $resp;
     }
+
 
     public function deleteCustomer(string $id): bool
     {

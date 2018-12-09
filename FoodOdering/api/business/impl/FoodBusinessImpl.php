@@ -1,9 +1,10 @@
 <?php
 
-require_once __DIR__."/../FoodBusiness.php";
+require_once __DIR__."/../../business/FoodBusiness.php";
 require_once __DIR__."/../../core/Food.php";
 require_once __DIR__."/../../repo/impl/FoodRepoImpl.php";
 require_once __DIR__."/../../db/DBConnection.php";
+
 
 class FoodBusinessImpl implements FoodBusiness
 {
@@ -13,13 +14,14 @@ class FoodBusinessImpl implements FoodBusiness
         $connection = (new DBConnction())->getDBConnection();
         $foodRepo = new FoodRepoImpl();
         $foodRepo->setConnection($connection);
-        $connection->autocommit(false);
-
-        $connection->commit();
-        $connection->rollback();
-        $connection->autocommit(true);
         return $foodRepo->addFood($food);
-        return true;
+        //      $connection->autocommit(false);
+
+  //      $connection->commit();
+  //      $connection->rollback();
+  //      $connection->autocommit(true);
+
+//        return true;
     }
 
     public function deleteFood(string $id): bool

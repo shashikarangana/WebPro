@@ -8,30 +8,65 @@ $customerBO=new CustomerBusinessImpl();
 ////$operartion=$_GET["operation"];
 //
 $method=$_SERVER["REQUEST_METHOD"];
+$post_op=$_POST["operation"];
 switch ($method){
     case "GET":
-        echo json_encode($customerBO->getAllCustomers());
-        break;
-    case "POST":
-        $cid=0;
-        $name=$_POST["cname"];
-        //$cname='sm';
-        $address=$_POST["caddress"];
-        //$caddress='asd';
-        $mobile=$_POST["cmobile"];
-       // $cmobile=12345;
-        $email=$_POST["cemail"];
-        //$cemail='asd@gmail.com';
-        $password='123';
-//
-//        switch ($operartion){
-//            case "add":
-//                $login=new Login($name,$password);
-//                $customer=new Customer($id,$name,$address,$mobile,$email);
-                $logincus=new LoginCus($cid,$name,$address,$mobile,$email,$password);
-                $result=$customerBO->addCustomer($logincus);
+        switch ($get_op){
+            case "All":
+                echo json_encode($customerBO->getAll());
+                break;
+            case "Search":
+                $cusId=$_GET["custID"];
+                echo json_encode($customerBO->search($cusId));
                 break;
         }
+        break;
+    case "POST":
+        switch ($post_op){
+            case "Add":
+                $cid=0;
+                $name=$_POST["CusName"];
+                $address=$_POST["CusAddress"];
+                $mobile=$_POST["CusMobile"];
+                $email=$_POST["CusEmail"];
+                $password='123';
+
+                //var_dump($_POST);
+                $result=$customerBO->addCustomer(new Customer($cid,$name,$address,$mobile,$email));
+               // $resp = $customerBO->addCustomer(new Customer($id,$name,$address,$salary));
+               // echo $name.'-'.$address.'-'.$mobile.'-'.$email;
+                break;
+//            case "Update":
+//                $resp = $customerBO->updateModel(new Model(0, $name, $description));
+//                echo $resp;
+//                break;
+//            case "Delete":
+//                $resp = $customerBO->deleteModel($name);
+//                echo $resp;
+//                break;
+        }
+        break;
+}
+//switch ($method){
+//    case "GET":
+//        echo json_encode($customerBO->getAllCustomers());
+//        break;
+//    case "POST":
+//        $cid=0;
+//        $name=$_POST["cname"];
+//        //$cname='sm';
+//        $address=$_POST["caddress"];
+//        //$caddress='asd';
+//        $mobile=$_POST["cmobile"];
+//       // $cmobile=12345;
+//        $email=$_POST["cemail"];
+//        //$cemail='asd@gmail.com';
+//        $password='123';
+//
+//                $logincus=new LoginCus($cid,$name,$address,$mobile,$email,$password);
+//                $result=$customerBO->addCustomer($logincus);
+//                break;
+//        }
 //}
 //$connect=mysqli_connect("127.0.0.1","root","1234","foododering","3306");
 //if(!$connect){

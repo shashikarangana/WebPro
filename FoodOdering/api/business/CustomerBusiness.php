@@ -1,12 +1,13 @@
 <?php
 
-require_once __DIR__."/../core/LoginCus.php";
+require_once __DIR__."/../core/Customer.php";
+//require_once __DIR__."/../core/LoginCus.php";
 
 interface CustomerBusiness
 {
-    public function addCustomer(LoginCus $loginCus): bool;
+    public function addCustomer(Customer $customer): bool;
     public function deleteCustomer(string $id): bool;
     public function searchCustomer(string $id): array;
-    public function updateCustomer(LoginCus $loginCus): bool;
+    public function updateCustomer(Customer $customer): bool;
     public function getAllCustomers(): array;
 }

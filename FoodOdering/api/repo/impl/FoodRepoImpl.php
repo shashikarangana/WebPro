@@ -10,11 +10,11 @@ class FoodRepoImpl implements FoodRepo
     /**
      * FoodRepoImpl constructor.
      */
-    public function __construct()
-    {
-        $connection=(new DBConnection())->getDBConnection();
-        $this->connection=$connection;
-    }
+//    public function __construct()
+//    {
+//        $connection=(new DBConnection())->getDBConnection();
+//        $this->connection=$connection;
+//    }
 
 
     public function setConnection(mysqli $connection): void

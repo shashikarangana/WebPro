@@ -55,7 +55,7 @@
             <div class="modal-header">
                 <h5 class="modal-title" id="ModalLabel">CUSTOMER</h5>
             </div>
-            <div class="modal-body">
+            <!--<div class="modal-body">-->
                 <form id="customerForm" class="form-group">
                     <fieldset class = "scheduler-border">
                         <legend class="scheduler-border"> Sign Up here</legend>
@@ -63,7 +63,7 @@
                             <div class="col col-md-12">
                                 <div class="form-group">
                                     <label>Customer Name</label>
-                                    <textarea class="form-control"  name="comment" id="cname"  placeholder=""></textarea>
+                                    <textarea class="form-control"  name="CusName" id="CusName"  placeholder=""></textarea>
                                 </div>
                             </div>
                         </div>
@@ -71,7 +71,7 @@
                             <div class="col col-md-12">
                                 <div class="form-group">
                                     <label>Customer Address</label>
-                                    <textarea class="form-control"  name="comment" id="caddress"  placeholder=""></textarea>
+                                    <textarea class="form-control"  name="CusAddress" id="CusAddress"  placeholder=""></textarea>
                                 </div>
                             </div>
                         </div>
@@ -79,7 +79,7 @@
                             <div class="col col-md-12">
                                 <div class="form-group">
                                     <label>Customer Mobile</label>
-                                    <textarea class="form-control"  name="comment" id="cmobile"  placeholder=""></textarea>
+                                    <textarea class="form-control"  name="CusMobile" id="CusMobile"  placeholder=""></textarea>
                                 </div>
                             </div>
                         </div>
@@ -87,7 +87,7 @@
                             <div class="col col-md-12">
                                 <div class="form-group">
                                     <label>Email</label>
-                                    <textarea class="form-control"  name="comment" id="cemail"  placeholder=""></textarea>
+                                    <textarea class="form-control"  name="CusEmail" id="CusEmail"  placeholder=""></textarea>
                                 </div>
                             </div>
                         </div>
@@ -95,7 +95,7 @@
                             <div class="col col-md-12">
                                 <div class="form-group">
                                     <label>Username</label>
-                                    <textarea class="form-control"  name="comment" id="uname"  placeholder=""></textarea>
+                                    <textarea class="form-control"  name="uname" id="uname"  placeholder=""></textarea>
                                 </div>
                             </div>
                         </div>
@@ -118,7 +118,7 @@
                         </div>
                     </fieldset>
                 </form>
-            </div>
+            <!--</div>-->
 
             <div class="modal-footer">
                 <div class="span pull-left">
@@ -291,13 +291,38 @@
 <script type="text/javascript">
 
     $(document).ready(function() {
+
         $('#SignUp').click(function () {
             $('#customerModel').modal('show');
         });
         $('#LoginBTN').click(function () {
-            window.location.href = 'home.php';
+            var uname = document.getElementById("userName").value;
+            var pwd = document.getElementById("userPassword1").value;
+            if(uname == 'Admin' && pwd == '123'){
+                window.location.href = 'foodForm.html';
+            }else{
+                window.location.href = 'home.php';
+            }
+
+        });
+
+        $('#registerBtn').click(function () {
+            let custForm=$('#customerForm').serializeArray();
+            custForm.push({name:"operation",value:"Add"});
+           // alert('hi');
+            $.ajax({
+
+                url:"api/service/CutsomerService.php" ,
+                method:"POST",
+                async: true,
+                data: custForm
+            }).done(function (r) {
+                alert(r+"hi");
+            });
         });
     });
+
+
 
 </script>
 

@@ -1,10 +1,12 @@
 <?php
 
 require_once __DIR__."/../business/impl/FoodBusinessImpl.php";
+require_once __DIR__."/../core/Food.php";
 
 $foodBOImpl=new FoodBusinessImpl();
 
 $method=$_SERVER["REQUEST_METHOD"];
+$operation=$_POST["operation"];
 switch ($method){
     case "GET":
         echo json_encode($foodBOImpl->getAllFoods());
