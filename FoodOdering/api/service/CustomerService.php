@@ -1,7 +1,6 @@
 <?php
 
 require_once __DIR__."/../business/impl/CustomerBusinessImpl.php";
-require_once __DIR__."/../core/LoginCus.php";
 require_once __DIR__."/../core/Customer.php";
 
 $customerBO=new CustomerBusinessImpl();
@@ -35,6 +34,7 @@ switch ($method){
                 $result=$customerBO->addCustomer(new Customer($cid,$name,$address,$mobile,$email));
                // $resp = $customerBO->addCustomer(new Customer($id,$name,$address,$salary));
                // echo $name.'-'.$address.'-'.$mobile.'-'.$email;
+            echo $result;
                 break;
 //            case "Update":
 //                $resp = $customerBO->updateModel(new Model(0, $name, $description));

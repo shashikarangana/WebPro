@@ -5,9 +5,9 @@ require_once __DIR__."/../core/Food.php";
 interface FoodBusiness
 {
     public function addFood(Food $food): bool;
-    public function deleteFood(string $id): bool;
-    public function searchFood(string $id): array;
-    public function updateFood(Food $food): bool;
-    public function getAllFoods(): array;
-    public function getAllFoodNames(): array;
+//    public function deleteFood(string $id);
+//    public function searchFood(string $id);
+    public function updateFood(Food $food);
+    public function getAllFoods();
+    public function getAllFoodNames();
 }

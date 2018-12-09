@@ -96,18 +96,22 @@
     //     alert(123);
     // }
     $('#btnFoodSave').click(function () {
-    alert(123);
-        // let foodForm = $('#foodForm').serializeArray();
-        // foodForm.push({name:"operation",value:"Save"});
-        // alert(456)
-        // $.ajax({
-        //      url: "api/service/FoodService.php",
-        //      method: "POST",
-        //      async: true,
-        //      data: foodForm
-        //  }).done(function (res) {
-        //      alert(res);
-        //  });
+    //alert(123);
+        let foodForm = $('#foodForm').serializeArray();
+        foodForm.push({name:"operation",value:"Save"});
+        //alert(456)
+        $.ajax({
+             url: "api/service/FoodService.php",
+             method: "POST",
+             async: true,
+             data: foodForm
+         }).done(function (res) {
+             if(res == '1'){
+                 alert("Food added successfully");
+             }else{
+                 alert("Invalid added");
+             }
+         });
          });
 
 </script>

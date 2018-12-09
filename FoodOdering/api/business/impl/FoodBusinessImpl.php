@@ -11,7 +11,7 @@ class FoodBusinessImpl implements FoodBusiness
 
     public function addFood(Food $food): bool
     {
-        $connection = (new DBConnction())->getDBConnection();
+        $connection = (new DBConnection())->getDBConnection();
         $foodRepo = new FoodRepoImpl();
         $foodRepo->setConnection($connection);
         return $foodRepo->addFood($food);
