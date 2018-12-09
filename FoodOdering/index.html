@@ -298,10 +298,27 @@
         $('#LoginBTN').click(function () {
             var uname = document.getElementById("userName").value;
             var pwd = document.getElementById("userPassword1").value;
-            if(uname == 'Admin' && pwd == '123'){
+            if(uname == 'Admin' && pwd == '123') {
                 window.location.href = 'foodForm.html';
-            }else{
+            }else if(uname == 'test' && pwd == '123'){
                 window.location.href = 'home.php';
+            }else{
+                let logSearch=$('#ph1').serializeArray();
+                logSearch.push({name:"operationGet",value:"SearchLogin"});
+                $.ajax({
+                    url:"api/service/CutsomerService.php" ,
+                    method:"GET",
+                    async: true,
+                    dataType:"json",
+                    data: logSearch
+                }).done(function (r) {
+                    alert(r[0][1]+'-'+r[0][2]);
+                    // if(r[0])
+                    // $('#cusName').val(r[0][1]);
+                    // $('#cusAddress').val(r[0][2]);
+                    // $('#cusSalary').val(r[0][3]);
+
+                });
             }
 
         });
@@ -317,7 +334,7 @@
                 async: true,
                 data: custForm
             }).done(function (r) {
-                alert(r);
+                //alert(r);
                 if(r == '1'){
                     alert('Successfully added');
                 }else {

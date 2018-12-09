@@ -28,7 +28,7 @@ class CustomerRepoImpl implements CustomerRepo
         $resp=$this->connection->
         query(
             "INSERT INTO Customer VALUES ({$customer->getCid()},'{$customer->getCname()}','{$customer->getCaddress()}',
-                {$customer->getCmobile()},'{$customer->getCemail()}')");
+                {$customer->getCmobile()},'{$customer->getCemail()}','{$customer->getCuname()}','{$customer->getCpwd()}')");
         return $resp;
     }
 
@@ -51,6 +51,12 @@ class CustomerRepoImpl implements CustomerRepo
     public function getAllCustomers(): array
     {
         $resultset=$this->connection->query("Select * from customer");
+        return $resultset->fetch_all();
+    }
+
+    public function searchLogUser(string $pwd, string $uname): array
+    {
+        $resultset=$this->connection->query("Select * from customer where cuname = '"+$uname+"' and cpwd = '"+$pwd+"'");
         return $resultset->fetch_all();
     }
 }

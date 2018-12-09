@@ -8,15 +8,21 @@ $customerBO=new CustomerBusinessImpl();
 //
 $method=$_SERVER["REQUEST_METHOD"];
 $post_op=$_POST["operation"];
+$get_op =$_GET["operationGet"];
 switch ($method){
     case "GET":
         switch ($get_op){
-            case "All":
-                echo json_encode($customerBO->getAll());
-                break;
-            case "Search":
-                $cusId=$_GET["custID"];
-                echo json_encode($customerBO->search($cusId));
+//            case "All":
+//                echo json_encode($customerBO->getAll());
+//                break;
+//            case "Search":
+//                $cusId=$_GET["custID"];
+//                echo json_encode($customerBO->search($cusId));
+//                break;
+            case "SearchLogin":
+                $uname = $_GET["userName"];
+                $pwd = $_GET["userPassword1"];
+                echo json_encode($customerBO->searchLogUser($uname,$pwd));
                 break;
         }
         break;
@@ -28,10 +34,11 @@ switch ($method){
                 $address=$_POST["CusAddress"];
                 $mobile=$_POST["CusMobile"];
                 $email=$_POST["CusEmail"];
-                $password='123';
+                $uname=$_POST["uname"];
+                $password=$_POST["pwd"];
 
                 //var_dump($_POST);
-                $result=$customerBO->addCustomer(new Customer($cid,$name,$address,$mobile,$email));
+                $result=$customerBO->addCustomer(new Customer($cid,$name,$address,$mobile,$email,$uname,$password));
                // $resp = $customerBO->addCustomer(new Customer($id,$name,$address,$salary));
                 //echo $name.'-'.$address.'-'.$mobile.'-'.$email;
                 echo $result;

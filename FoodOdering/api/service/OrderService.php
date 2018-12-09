@@ -16,7 +16,7 @@ switch ($method){
         $fid=$_POST["orderItemID"];
         $quantity=$_POST["orderQuantity"];
         $ordate=$_POST["OrderDate"];
-
+var_dump($_POST);
         $cusOrder=new CusOrder($oid,$cid,$fid,$pid,$quantity,$ordate,$price);
         //echo $price;
         //echo $cid,$fid,$quantity;

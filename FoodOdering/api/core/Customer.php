@@ -8,6 +8,8 @@ class Customer
     private $caddress;
     private $cmobile;
     private $cemail;
+    private $cuname;
+    private $cpwd;
 
     /**
      * Customer constructor.
@@ -17,13 +19,47 @@ class Customer
      * @param $cmobile
      * @param $cemail
      */
-    public function __construct($cid, $cname, $caddress, $cmobile, $cemail)
+    public function __construct($cid, $cname, $caddress, $cmobile, $cemail, $cuname, $cpwd)
     {
         $this->cid = $cid;
         $this->cname = $cname;
         $this->caddress = $caddress;
         $this->cmobile = $cmobile;
         $this->cemail = $cemail;
+        $this->cuname = $cuname;
+        $this->cpwd = $cpwd;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCuname()
+    {
+        return $this->cuname;
+    }
+
+    /**
+     * @param mixed $cuname
+     */
+    public function setCuname($cuname): void
+    {
+        $this->cuname = $cuname;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCpwd()
+    {
+        return $this->cpwd;
+    }
+
+    /**
+     * @param mixed $cpwd
+     */
+    public function setCpwd($cpwd): void
+    {
+        $this->cpwd = $cpwd;
     }
 
 

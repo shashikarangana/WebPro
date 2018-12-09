@@ -64,4 +64,12 @@ class CustomerBusinessImpl implements CustomerBusiness
         $customerRepo->setConnection($connection);
         return $customerRepo->getAllCustomers();
     }
+
+    public function searchLogUser(string $uname, string $pwd): array
+    {
+        $connection = (new DBConnection())->getDBConnection();
+        $customerRepo = new CustomerRepoImpl();
+        $customerRepo->setConnection($connection);
+        return $customerRepo->getAllCustomers();
+    }
 }

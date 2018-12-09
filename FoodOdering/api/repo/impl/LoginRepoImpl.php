@@ -35,7 +35,8 @@ class LoginRepoImpl implements LoginRepo
 
     public function searchLogUSer(string $id): array
     {
-        // TODO: Implement searchLogUSer() method.
+        $resultset=$this->connection->query("Select * from login");
+        return $resultset->fetch_all();
     }
 
     public function updateLogUSer(Login $login): bool

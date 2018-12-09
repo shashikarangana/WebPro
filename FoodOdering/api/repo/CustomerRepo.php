@@ -11,6 +11,7 @@ interface CustomerRepo
     public function deleteCustomer(string $id): bool;
 
     public function searchCustomer(string $id): array;
+    public function searchLogUser(string $pwd, string $uname): array;
 
     public function updateCustomer(Customer $customer): bool;
 
