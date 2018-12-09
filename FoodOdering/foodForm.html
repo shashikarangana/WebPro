@@ -108,6 +108,7 @@
          }).done(function (res) {
              if(res == '1'){
                  alert("Food added successfully");
+                 document.getElementById("foodForm").reset();
              }else{
                  alert("Invalid added");
              }
