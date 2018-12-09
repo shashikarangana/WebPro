@@ -15,13 +15,7 @@ class FoodBusinessImpl implements FoodBusiness
         $foodRepo = new FoodRepoImpl();
         $foodRepo->setConnection($connection);
         return $foodRepo->addFood($food);
-        //      $connection->autocommit(false);
 
-  //      $connection->commit();
-  //      $connection->rollback();
-  //      $connection->autocommit(true);
-
-//        return true;
     }
 
     public function deleteFood(string $id): bool

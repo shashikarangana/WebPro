@@ -33,8 +33,8 @@ switch ($method){
                 //var_dump($_POST);
                 $result=$customerBO->addCustomer(new Customer($cid,$name,$address,$mobile,$email));
                // $resp = $customerBO->addCustomer(new Customer($id,$name,$address,$salary));
-               // echo $name.'-'.$address.'-'.$mobile.'-'.$email;
-            echo $result;
+                //echo $name.'-'.$address.'-'.$mobile.'-'.$email;
+                echo $result;
                 break;
 //            case "Update":
 //                $resp = $customerBO->updateModel(new Model(0, $name, $description));

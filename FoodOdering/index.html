@@ -312,12 +312,17 @@
            // alert('hi');
             $.ajax({
 
-                url:"api/service/CutsomerService.php" ,
+                url:"api/service/CustomerService.php" ,
                 method:"POST",
                 async: true,
                 data: custForm
             }).done(function (r) {
-                alert(r+"hi");
+                alert(r);
+                if(r == '1'){
+                    alert('Successfully added');
+                }else {
+                    alert(r+'Save Faild');
+                }
             });
         });
     });

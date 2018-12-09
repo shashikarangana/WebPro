@@ -1,14 +1,13 @@
 <?php
 
-require_once __DIR__."/../CustomerBusiness.php";
+require_once __DIR__."/../../business/CustomerBusiness.php";
 require_once __DIR__."/../../core/Customer.php";
 require_once __DIR__."/../../db/DBConnection.php";
 require_once __DIR__."/../../repo/impl/CustomerRepoImpl.php";
-require_once __DIR__."/../../repo/impl/LoginRepoImpl.php";
+
 
 class CustomerBusinessImpl implements CustomerBusiness
 {
-
 //    public function addCustomer(LoginCus $loginCus): bool
 //    {
 //        $connection=(new DBConnection())->getDBConnection();
@@ -40,6 +39,7 @@ class CustomerBusinessImpl implements CustomerBusiness
         $connection=(new DBConnection())->getDBConnection();
         $customerRepo=new CustomerRepoImpl();
         $customerRepo->setConnection($connection);
+      //  console.log($customer+'in business imple');
         return $customerRepo->addCustomer($customer);
     }
     public function deleteCustomer(string $id): bool
@@ -52,7 +52,7 @@ class CustomerBusinessImpl implements CustomerBusiness
         // TODO: Implement searchCustomer() method.
     }
 
-    public function updateCustomer(LoginCus $loginCus): bool
+    public function updateCustomer(Customer $customer): bool
     {
         // TODO: Implement updateCustomer() method.
     }

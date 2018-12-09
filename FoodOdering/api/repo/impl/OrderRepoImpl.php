@@ -7,16 +7,6 @@ class OrderRepoImpl implements OrderRepo
 {
     private $connection;
 
-    /**
-     * OrderRepoImpl constructor.
-     */
-    public function __construct()
-    {
-        $connection=(new DBConnection())->getDBConnection();
-        $this->connection=$connection;
-    }
-
-
     public function setConnection(mysqli $connection): void
     {
         $this->connection=$connection;
@@ -25,7 +15,7 @@ class OrderRepoImpl implements OrderRepo
     public function addOrder(Order $order): bool
     {
 //        $resp=$this->connection->query("insert into orders values('{$order->getOid()}','{$order->getCid()}','{$order->getFid()}',1,'{$order->getQuantity()}','{$order->getOrderDate()}')");
-        $resp=$this->connection->query("insert into orders values(null,2,2,1,1,'2018-12-4')");
+        $resp=$this->connection->query("insert into orders values(1,2,3,4,5,'2018-12-9')");
         return $resp;
     }
 

@@ -25,11 +25,14 @@ class CustomerRepoImpl implements CustomerRepo
 
     public function addCustomer(Customer $customer): bool
     {
-       // echo "I love you"+$customer->getCid()+" "+$customer->getCname()+" "+$customer->getCaddress()+" "+$customer->getCmobile()+" "+$customer->getCemail();
+//        $resp=$this->connection->
+//        query(
+//            "INSERT INTO Customer VALUES ({$customer->getCid()},'{$customer->getCname()}','{$customer->getCaddress()}',
+//                {$customer->getCmobile()},'{$customer->getCemail()}')");
         $resp=$this->connection->
         query(
-            "INSERT INTO Customer VALUES ({$customer->getCid()},'{$customer->getCname()}','{$customer->getCaddress()}',
-                {$customer->getCmobile()},'{$customer->getCemail()}')");
+            "INSERT INTO Customer VALUES (25,'shashi','add',
+                12345,'asdvb')");
         return $resp;
     }
 
